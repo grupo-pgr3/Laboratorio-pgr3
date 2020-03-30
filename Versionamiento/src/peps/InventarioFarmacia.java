@@ -5,9 +5,11 @@
  */
 package peps;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author B
+ * @author B mmmmm
  */
 public class InventarioFarmacia extends javax.swing.JFrame {
 
@@ -79,8 +81,13 @@ public class InventarioFarmacia extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Inventario PEPS Farmacia Despertad");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                cerrar(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 71, 643, 10));
 
@@ -146,12 +153,26 @@ public class InventarioFarmacia extends javax.swing.JFrame {
 
         cmbMovimientoItem8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Salida" }));
         getContentPane().add(cmbMovimientoItem8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
+
+        txtInventarioFinItem1.setText("100");
         getContentPane().add(txtInventarioFinItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 75, -1));
+
+        txtInventarioFinItem2.setText("100");
         getContentPane().add(txtInventarioFinItem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 75, -1));
+
+        txtInventarioFinItem3.setText("100");
         getContentPane().add(txtInventarioFinItem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 75, -1));
+
+        txtInventarioFinItem4.setText("100");
         getContentPane().add(txtInventarioFinItem4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 75, -1));
+
+        txtInventarioFinItem5.setText("100");
         getContentPane().add(txtInventarioFinItem5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 75, -1));
+
+        txtInventarioFinItem6.setText("100");
         getContentPane().add(txtInventarioFinItem6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, 75, -1));
+
+        txtInventarioFinItem7.setText("100");
         getContentPane().add(txtInventarioFinItem7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 75, -1));
         getContentPane().add(txtInventarioFinItem8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 75, -1));
 
@@ -189,13 +210,61 @@ public class InventarioFarmacia extends javax.swing.JFrame {
 
         jLabel23.setText("Entrada o salida de inventario");
         getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
+
+        txtMovimientoItem1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem1KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 67, -1));
+
+        txtMovimientoItem2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem2KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 67, -1));
+
+        txtMovimientoItem3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem3KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 67, -1));
+
+        txtMovimientoItem4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem4KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 67, -1));
+
+        txtMovimientoItem5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem5KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 67, -1));
+
+        txtMovimientoItem6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem6KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 67, -1));
+
+        txtMovimientoItem7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem7KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 67, -1));
+
+        txtMovimientoItem8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMovimientoItem8KeyTyped(evt);
+            }
+        });
         getContentPane().add(txtMovimientoItem8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 67, -1));
 
         pack();
@@ -301,6 +370,102 @@ public class InventarioFarmacia extends javax.swing.JFrame {
             txtInventarioFinItem8.setText(""+invFin);
         }
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void cerrar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_cerrar
+        // TODO add your handling code here:
+        int result = JOptionPane.showConfirmDialog(this,"Desea salir?");
+        if (result == JOptionPane.YES_OPTION){
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        }
+    }//GEN-LAST:event_cerrar
+
+    private void txtMovimientoItem1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem1KeyTyped
+        // TODO add your handling code here:
+        char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem1KeyTyped
+
+    private void txtMovimientoItem2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem2KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem2KeyTyped
+
+    private void txtMovimientoItem3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem3KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem3KeyTyped
+
+    private void txtMovimientoItem4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem4KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem4KeyTyped
+
+    private void txtMovimientoItem5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem5KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem5KeyTyped
+
+    private void txtMovimientoItem6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem6KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem6KeyTyped
+
+    private void txtMovimientoItem7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem7KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem7KeyTyped
+
+    private void txtMovimientoItem8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovimientoItem8KeyTyped
+        // TODO add your handling code here:
+           char validar=evt.getKeyChar();
+        
+        if(Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
+        }
+    }//GEN-LAST:event_txtMovimientoItem8KeyTyped
 
     /**
      * @param args the command line arguments
